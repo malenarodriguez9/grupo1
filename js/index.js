@@ -6,8 +6,9 @@ fetch('https://dummyjson.com/recipes')
     console.log(data);
     let recetas = document.querySelector(".recetas");
     let titulo = "";
+    let recetasCargadas = 10;
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < recetasCargadas; i++) {
         console.log(i);
         titulo += `<article class="imagenes">
         <img src="${data.recipes[i].image}" alt="">
@@ -20,7 +21,13 @@ fetch('https://dummyjson.com/recipes')
 
     let cargar = document.querySelector('.button_cargar');
     cargar.addEventListener('click', function() {
-        for (let i = 10; i < 20; i++) {
+        let nuevasRecetas = recetasCargadas + 10;
+        if (recetasCargadas < 20){
+            if (nuevasRecetas > 20){
+                nuevasRecetas = 20;
+            }
+        }
+        for (let i = recetasCargadas; i < nuevasRecetas; i++) {
             titulo += `<article class="imagenes">
             <img src="${data.recipes[i].image}" alt="">
             <a class="comida" href="./index.html?id=${data.recipes[i].id}">
@@ -29,6 +36,11 @@ fetch('https://dummyjson.com/recipes')
             </article>`;
         }
         recetas.innerHTML = titulo;
+        recetasCargadas = nuevasRecetas
+       
+        if (recetasCargadas === 20) {
+            cargar.style.display = 'none';
+        }
     });
 })
 .catch(function(error) {
