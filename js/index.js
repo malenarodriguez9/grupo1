@@ -12,7 +12,7 @@ fetch('https://dummyjson.com/recipes')
         console.log(i);
         titulo += `<article class="imagenes">
         <img src="${data.recipes[i].image}" alt="">
-        <a class="comida" href="./index.html?id=${data.recipes[i].id}">
+        <a class="comida" href="./detalles.html?id=${data.recipes[i].id}">
         Comida: ${data.recipes[i].name}</a>
         <p class="dificultad">Dificultad: ${data.recipes[i].difficulty}</p>
         </article>`;
@@ -22,15 +22,15 @@ fetch('https://dummyjson.com/recipes')
     let cargar = document.querySelector('.button_cargar');
     cargar.addEventListener('click', function() {
         let nuevasRecetas = recetasCargadas + 10;
-        if (recetasCargadas < 20){
-            if (nuevasRecetas > 20){
-                nuevasRecetas = 20;
+        if (recetasCargadas < 30){
+            if (nuevasRecetas > 30){
+                nuevasRecetas = 30;
             }
         }
         for (let i = recetasCargadas; i < nuevasRecetas; i++) {
             titulo += `<article class="imagenes">
             <img src="${data.recipes[i].image}" alt="">
-            <a class="comida" href="./index.html?id=${data.recipes[i].id}">
+            <a class="comida" href="./detalles.html?id=${data.recipes[i].id}">
             Comida: ${data.recipes[i].name}</a>
             <p class="dificultad">Dificultad: ${data.recipes[i].difficulty}</p>
             </article>`;
@@ -38,7 +38,7 @@ fetch('https://dummyjson.com/recipes')
         recetas.innerHTML = titulo;
         recetasCargadas = nuevasRecetas
        
-        if (recetasCargadas === 20) {
+        if (recetasCargadas === 30) {
             cargar.style.display = 'none';
         }
     });
@@ -47,16 +47,5 @@ fetch('https://dummyjson.com/recipes')
     console.log("Error al obtener las recetas:", error);
 });
 
-fetch('https://dummyjson.com/recipes/search?q=Margherita')
-.then(function(res) {
-    return res.json();
-})
-.then(function(buscar) {
-    console.log(buscar);
-    let buscador = document.querySelector('.buscador');
-    buscador.innerHTML = `<a href="./detalles.html?id=${buscar.recipes[0].id}">Ver detalles de Margherita</a>`;
-})
-.catch(function(error) {
-    console.log("Error al buscar Margherita:", error);
-});
+
 
