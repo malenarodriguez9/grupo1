@@ -156,6 +156,53 @@ input[type="password"]{
     
 }
 
+main.detallespag {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  article.detalles_article {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    background:rgb(201, 197, 201) ; 
+    padding: 25px;
+    border-radius: 10px;
+  }
+  
+  article.detalles_article h2 {
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  article.detalles_article img {
+    width: 50%; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; 
+    margin-left: 25%; 
+    display: flex;
+  }
+  
+  article.detalles_article p {
+    font-size: 18px;
+    color: white;
+    
+  }
+  
+  article.detalles_article a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  
+  
 
 
 

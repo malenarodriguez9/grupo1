@@ -17,7 +17,6 @@ let detalles_article= document.querySelector(".detalles_article")
             <div class= "titulo_detalle"> 
                 <h2>${data.name}</h2>
                 </div>
-                
                 <img src= "${data.image}" alt = "" class = "imagen_detalle"> 
                 <article class= "tittle_detalle"> 
                 <p><b>Tiempo de preparacion: </b>${data.preptimeminutes} minutos </p>
@@ -30,6 +29,6 @@ let detalles_article= document.querySelector(".detalles_article")
         
         .catch(function(error){
             console.error(error);
-            document.body.innerHTML = '<h1>Error al cargar la receta.</h1>';
+            document.body.innerHTML = '<h1>No se pudo cargar la receta. Intente nuevamente.</h1>';
         })
 
