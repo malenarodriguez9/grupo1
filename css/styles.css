@@ -200,7 +200,98 @@ main.detallespag {
     font-weight: bold;
     transition: color 0.3s ease;
   }
-  
+
+.Cat {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
+    background-color: white;
+}
+
+.Cat1 {
+    background-color: rgb(201, 197, 201);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    width: 45%; 
+    margin-bottom: 20px; 
+}
+
+.categoria_link {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.categoriaNombre{
+    text-align: center;
+    margin: 20px 600px ;
+    font-size: 30px;
+    color: white;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(201, 197, 201) ;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    
+    
+}
+
+.recetas-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    
+}
+
+.receta-item {
+    background-color: rgb(201, 197, 201);
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.receta-imagen {
+    width: 60%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.receta-titulo {
+    font-size: 20px;
+    margin: 15px 0;
+    color: white;
+}
+
+.receta-item p {
+    font-size: 15px;
+    margin: 10px 0;
+    color: white;
+}
+
+
+.ver-detalle {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 15px 25px;
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+} 
   
   
 
