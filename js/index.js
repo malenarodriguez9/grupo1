@@ -1,4 +1,4 @@
-fetch('https://dummyjson.com/recipes')
+fetch('https://dummyjson.com/recipes?limit=10')
 .then(function(response) {
     return response.json();
 })
@@ -6,9 +6,8 @@ fetch('https://dummyjson.com/recipes')
     console.log(data);
     let recetas = document.querySelector(".recetas");
     let titulo = "";
-    let recetasCargadas = 10;
 
-    for (let i = 0; i < recetasCargadas; i++) {
+    for (let i = 0; i < data.recipes.length; i++) {
         console.log(i);
         titulo += `<article class="imagenes">
         <img src="${data.recipes[i].image}" alt="">
@@ -17,17 +16,28 @@ fetch('https://dummyjson.com/recipes')
         <p class="dificultad">Dificultad: ${data.recipes[i].difficulty}</p>
         </article>`;
     }
-    recetas.innerHTML = titulo;
+    recetas.innerHTML += titulo;
 
-    let cargar = document.querySelector('.button_cargar');
-    cargar.addEventListener('click', function() {
-        let nuevasRecetas = recetasCargadas + 10;
-        if (recetasCargadas < 30){
-            if (nuevasRecetas > 30){
-                nuevasRecetas = 30;
-            }
-        }
-        for (let i = recetasCargadas; i < nuevasRecetas; i++) {
+})
+.catch(function(error) {
+    console.log("Error al obtener las recetas:", error);
+});
+
+let cargar = document.querySelector('.button_cargar');
+let skip = 10
+
+cargar.addEventListener('click', function() {
+    fetch(`https://dummyjson.com/recipes?limit=10&skip=${skip}`)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        console.log(data);
+        let recetas = document.querySelector(".recetas");
+        let titulo = "";
+    
+        for (let i = 0; i < data.recipes.length; i++) {
+            console.log(i);
             titulo += `<article class="imagenes">
             <img src="${data.recipes[i].image}" alt="">
             <a class="comida" href="./detalles.html?id=${data.recipes[i].id}">
@@ -35,17 +45,15 @@ fetch('https://dummyjson.com/recipes')
             <p class="dificultad">Dificultad: ${data.recipes[i].difficulty}</p>
             </article>`;
         }
-        recetas.innerHTML = titulo;
-        recetasCargadas = nuevasRecetas
-       
-        if (recetasCargadas === 30) {
-            cargar.style.display = 'none';
-        }
+        recetas.innerHTML += titulo;
+    
+    })
+    .catch(function(error) {
+        console.log("Error al obtener las recetas:", error);
     });
-})
-.catch(function(error) {
-    console.log("Error al obtener las recetas:", error);
-});
 
+    skip = skip + 10
+    
+});
 
 

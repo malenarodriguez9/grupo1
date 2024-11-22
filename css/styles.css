@@ -248,7 +248,6 @@ main.detallespag {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
     padding: 20px;
     margin: 0 auto;
     
@@ -292,6 +291,57 @@ main.detallespag {
     text-decoration: none;
     font-weight: bold;
 } 
+
+form {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+
+.resultados_recetas {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center; 
+    border-radius: 10px;
+}
+
+.imagenes2 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: rgb(201, 197, 201); 
+    border-radius: 10px;
+    width: 280px;
+    padding: 15px;
+    text-align: center;
+    margin: 30px;
+}
+
+.imagenes2 img {
+    width: 70%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.imagenes2 a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.imagenes2 .dificultad {
+    color: black;
+    font-size: 15px;
+    padding: 5px;
+}
+
+
+
   
   
 
