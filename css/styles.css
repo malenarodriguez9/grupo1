@@ -48,6 +48,7 @@
     margin-right: 60px;
     font-size: 20px;
 }
+
 .piepagina{
     background-color:rgb(201, 197, 201 ) ;
     padding: 30px;
@@ -308,6 +309,17 @@ form {
     justify-content: center; 
     border-radius: 10px;
 }
+.titulo_busqueda{
+    margin-left: 350px;
+    background-color: rgb(201, 197, 201);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    width: 45%; 
+    margin-bottom: 20px; 
+    color: white;
+
+}
 
 .imagenes2 {
     display: flex;
@@ -345,20 +357,46 @@ form {
 /*---------------------------media querys------------------------------------*/
 
 @media(max-width:425px){
+    .home{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px, 5x;
+        background-color:rgb(201, 197, 201);
+        text-decoration: none;
+    }
     .logo{
-        height: 40px;
-        margin-right: 10px;
+        flex-direction: row;
+        align-items: center;
+        height: 60px;
+        
+    }
+    .BarraNavegacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 20px;
+        margin-left: 0;    
+    
     }
     .BarraNavegacion a {
-        text-decoration: none;
-        color: white;
-        margin-right: 60px;
+        margin-right: 10px;
         font-size: 10px;
+        
+    }
+    .BarraNavegacion2{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-right: 20px;
     }
     .BarraNavegacion2 a {
         text-decoration: none;
         color: white;
-        margin-right: 60px;
+        margin-right: 10px;
         font-size: 10px;
     }
     .piepagina{
@@ -465,7 +503,16 @@ form {
       article.detalles_article p {
         font-size: 12px;
       }
-
+      .titulo_busqueda{
+        margin-left: 110px;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        width: 45%; 
+        margin-bottom: 20px; 
+       
+    
+    }
 
 }
 

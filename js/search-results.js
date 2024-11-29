@@ -13,9 +13,20 @@ fetch(`https://dummyjson.com/recipes/search?q=${extraer}`)
         
         if (data.recipes.length === 0) {
             resultados.innerHTML = `<p class="sin-resultados">No hay resultados que coincidan con tu búsqueda.</p>`;
-        } else {
+        } 
+        else if (extraer.length == ""){
+            resultados.innerHTML = `<p> El campo esta vacio </p>`
+        }
+        else if(extraer.length <3){
+            resultados.innerHTML= `<p> La busqueda minima es de 3 caracteres </p>`
+        }
+        else {
+            let titulo= document.querySelector("h2")
+            titulo.innerText= extraer
             for (let i = 0; i < data.recipes.length; i++) {
-                resultados.innerHTML += `<article class="imagenes2">
+                resultados.innerHTML += 
+                `
+                <article class="imagenes2">
                     <img src="${data.recipes[i].image}" alt="">
                     <a class="comida" href="./detalles.html?id=${data.recipes[i].id}">
                     Comida: ${data.recipes[i].name}</a>
