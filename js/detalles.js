@@ -19,9 +19,9 @@ let detalles_article= document.querySelector(".detalles_article")
                 </div>
                 <img src= "${data.image}" alt = "" class = "imagen_detalle"> 
                 <article class= "tittle_detalle"> 
-                <p><b>Tiempo de preparacion: </b>${data.preptimeminutes} minutos </p>
-                <p><b>Tiempo de coccion: </b>${data.cooktimeminutes} minutos </p>
-                <a class = "a_detalles" href= "./categorias.html"> <b> Categorias: </b> ${data.mealtype} </a>
+                <p><b>Tiempo de preparacion: </b>${data.prepTimeMinutes} minutos </p>
+                <p><b>Tiempo de coccion: </b>${data.cookTimeMinutes} minutos </p>
+                <a class = "malena" href= "./categorias.html"> <b> Categorias: </b> ${data.tags} </a>
                 </article>
                 
                 <p><b> Intrucciones: </b></p><p>${data.instructions}</p>`

@@ -74,7 +74,6 @@ main {
     max-width: 1200px; 
 }
 
-
 .imagenes {
     width: 18%; 
     display: flex;
@@ -198,9 +197,10 @@ main.detallespag {
     color: black;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
   }
-
+  .detalles_article .section_detalles .tittle_detalle .malena  {
+    color: white;
+  }
 .Cat {
     display: flex;
     flex-wrap: wrap; 
@@ -258,6 +258,8 @@ main.detallespag {
     border-radius: 10px;
     width: 300px;
     text-align: center;
+    justify-content: space-between;
+    margin: 10px;
 }
 
 .receta-imagen {
@@ -338,6 +340,133 @@ form {
     color: black;
     font-size: 15px;
     padding: 5px;
+}
+
+/*---------------------------media querys------------------------------------*/
+
+@media(max-width:425px){
+    .logo{
+        height: 40px;
+        margin-right: 10px;
+    }
+    .BarraNavegacion a {
+        text-decoration: none;
+        color: white;
+        margin-right: 60px;
+        font-size: 10px;
+    }
+    .BarraNavegacion2 a {
+        text-decoration: none;
+        color: white;
+        margin-right: 60px;
+        font-size: 10px;
+    }
+    .piepagina{
+        font-size: 10px;
+    }
+    .recetas {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px;
+    }
+    
+    .imagenes {
+        width: 100%; 
+        padding: 10px;
+    }
+    
+    .imagenes img {
+        width: 100%;
+        border-radius: 8px; 
+    }
+     
+    .comida {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+    
+    .dificultad {
+        font-size: 12px;
+    }
+    
+    .button_cargar {
+        margin-top: 20px; 
+        padding: 6px 15px; 
+        font-size: 15px; 
+        
+    }
+    
+    .Cat1 {
+        padding: 5px;
+        width: 80%; 
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 20px; 
+    }
+    .Seclogin{
+        font-size: 12px;
+        padding: 50px;
+        justify-content: center;
+        margin-left: 60px;
+        margin-right: 20px;
+
+
+    }
+
+    input[type="email"],
+    input[type="password"]{
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 15px;
+    
+    }
+    .Botingresar {
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 12px;
+        width: 100%;
+        margin-bottom: 5px;
+        
+    }
+    .categoriaNombre{
+        text-align: center;
+        margin: 20px 50px ;
+        font-size: 20px;
+        padding: 10px;     
+    }
+    main.detallespag {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      article.detalles_article {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        background:rgb(201, 197, 201) ; 
+        padding: 25px;
+        border-radius: 10px;
+      }
+      
+      article.detalles_article h2 {
+        font-size: 20px;
+      }
+      
+      article.detalles_article img {
+        width: 70%; 
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px; 
+        margin-left: 47px;
+        margin-right: 25px;
+        display: flex;
+      }
+      article.detalles_article p {
+        font-size: 12px;
+      }
+
+
 }
 
 
